@@ -732,6 +732,21 @@
         document.body.addEventListener('click', () => SoundManager.init(), { once: true });
         document.body.addEventListener('touchstart', () => SoundManager.init(), { once: true });
 
+        // Background Music
+        const bgMusic = new Audio('assets/background-mucsic.mp3');
+        bgMusic.loop = true;
+        bgMusic.volume = 0.3;
+
+        function playBackgroundMusic() {
+            bgMusic.play().catch(() => {});
+        }
+
+        // Play music on first interaction (click on name input or anywhere)
+        const nameInput = document.getElementById('nameInput');
+        nameInput.addEventListener('click', playBackgroundMusic, { once: true });
+        nameInput.addEventListener('focus', playBackgroundMusic, { once: true });
+        document.body.addEventListener('click', playBackgroundMusic, { once: true });
+
         // Shake Detection
         let lastX, lastY, lastZ;
         let lastTime = 0;
