@@ -1,0 +1,12 @@
+{
+  "name": "food-destiny",
+  "version": "1.0.0",
+  "description": "Vietnamese fortune-telling card game - Góc Tiên Tri",
+  "scripts": {
+    "start": "npx http-server -p 5501 -o",
+    "serve": "npx http-server -p 5501"
+  },
+  "keywords": ["fortune", "cards", "game", "vietnamese"],
+  "author": "NhanNguyen-da",
+  "license": "MIT"
+}
